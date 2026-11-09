@@ -41,7 +41,7 @@ npm run build      # 빌드가 통과하는지 확인
 
 1. 저장소 주소 복사 → `git clone <주소>` → `cd` 로 폴더 안으로 → `npm install`
 2. 내 작업용 가지 만들기: `git checkout -b user/g1-home`  (main 에서 직접 작업하지 않기)
-3. 수정 후: `git add .` → `git commit -m "G1 화면 추가"` → `git push -u origin suyeon/g1-home`
+3. 수정 후: `git add .` → `git commit -m "G1 화면 추가"` → `git push -u origin user/g1-home`
 4. GitHub 웹에서 **Compare \& pull request** 를 눌러 올리면, 막스가 확인 후 합칩니다.
 5. 작업 시작 전에는 항상 `git checkout main \&\& git pull` 로 최신을 받습니다.
 
