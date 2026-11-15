@@ -46,6 +46,7 @@ export default function DemoPanel() {
           {ELDERLY_SCREENS.map((s) => (
             <button key={s} className={path === s ? 'active' : ''} onClick={() => go(s)}>{s.toUpperCase()}</button>
           ))}
+          <button className={path === 'g6' ? 'active' : ''} onClick={() => go('g6')}>G6 보호자 현황</button>
         </div>
       </div>
 

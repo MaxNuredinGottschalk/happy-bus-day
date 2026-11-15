@@ -1,4 +1,8 @@
-# guardian/ — G1–G7 (not built yet)
+# guardian/ — 보호자 화면
 
-Put guardian screens here, one file per screen (G1Home.tsx, G2Schedule.tsx, ...).
-They read the SAME state as the elderly screens: `useVisit()` from `../state/visit`.
+- G6 방문 현황: `G6VisitStatus.tsx` / `#/g6`
+- G1–G5, G7: 아직 구현하지 않음.
+- 기존 `useVisit()`로 상태를 읽기만 합니다. 상태 변경·예약·알림 발송 기능은 없습니다.
+- G6 스타일은 `guardian.css`의 `.g6` 내부에 한정합니다.
+- 현재 시연은 같은 브라우저의 탭 간 공유입니다. 실제 보호자 연결·공개 범위는 미확정이며 실서비스에서 이 화면을 공개하기 전에 정해야 합니다.
+- 화면 표시 규칙과 검증 방법: [G6 검증 기록](../../docs/g6-validation.md).

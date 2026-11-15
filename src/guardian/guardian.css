@@ -1,0 +1,33 @@
+.g6{width:390px;max-width:100%;background:var(--bg);border-radius:8px;box-shadow:0 8px 30px rgba(0,0,0,.18);font-size:1rem;line-height:1.6;overflow-wrap:anywhere}
+.g6-header{padding:18px 20px;border-bottom:2px solid var(--line);display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:space-between;align-items:center;color:var(--teal);font-weight:700}
+.g6-brand{font-size:.875rem;letter-spacing:.06em}
+.g6-body{display:flex;flex-direction:column;gap:20px;padding:24px 20px}
+.g6 h1,.g6 h2,.g6 h3,.g6 p,.g6 dl{margin:0}
+.g6 h1{font-size:1.75rem;line-height:1.35;margin:6px 0 10px}
+.g6 h2{font-size:1.25rem;line-height:1.5;margin-bottom:12px}
+.g6 h3{font-size:1rem}
+.g6-eyebrow{font-weight:700;color:var(--teal)}
+.g6-muted,.g6-footer{color:var(--muted)}
+.g6-demo-note{border-left:4px solid var(--yellow-line);background:var(--yellow-soft);padding:14px 16px;font-size:.875rem}
+.g6-demo-note p{margin-top:6px}
+.g6-status{background:var(--teal);color:#fff;padding:20px;border-radius:20px}
+.g6-badge{display:inline-block;border:1px solid currentColor;border-radius:24px;padding:3px 12px;margin-bottom:14px}
+.g6-status h2{font-size:1.625rem}
+.g6-timestamp{font-size:.875rem;margin-top:14px!important}
+.g6-next{background:var(--teal-soft);color:var(--text);padding:16px;border-radius:12px;margin-top:18px}
+.g6-next p{margin-top:6px}
+.g6-card{background:#fff;border:2px solid var(--line);border-radius:20px;padding:18px}
+.g6-steps{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.g6-steps li{display:flex;align-items:center;gap:10px;padding:8px;border:2px solid transparent;border-radius:10px}
+.g6-steps li[aria-current]{border-color:var(--teal);background:var(--teal-soft);font-weight:700}
+.g6-step-number{flex:none;display:grid;place-items:center;width:1.875rem;height:1.875rem;border:1px solid var(--line);border-radius:50%}
+.g6-current{font-size:.875rem;color:var(--teal);margin-left:auto}
+.g6-numbers>div,.g6-details>div{padding:12px 0;border-top:1px solid var(--line-soft)}
+.g6 dt{color:var(--muted)}
+.g6 dd{margin:4px 0 0;font-weight:700}
+.g6-numbers dd{font-size:1.75rem;color:var(--teal)}
+.g6-estimate{margin-top:10px;padding-top:16px;border-top:2px solid var(--line)}
+.g6-estimate-value{font-size:1.5rem;font-weight:700;margin:6px 0!important}
+.g6-estimate .g6-muted{margin-top:12px}
+.g6-footer{font-size:.875rem;padding:0 4px 8px}
+@media(max-width:480px){.g6{width:100%;border-radius:0;box-shadow:none}.g6-body{padding:20px 16px}.g6 + .demo{display:none}}
