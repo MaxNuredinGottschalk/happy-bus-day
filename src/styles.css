@@ -108,3 +108,6 @@ button{font-family:inherit;cursor:pointer;color:inherit}
 .demo label{display:flex;gap:6px;align-items:center}
 .demo input[type=number]{width:70px}
 .demo .badge{background:var(--yellow-soft);border-radius:6px;padding:4px 8px}
+@media (max-width:480px){
+  .demo{display:none}
+}
