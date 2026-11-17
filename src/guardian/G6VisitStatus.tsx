@@ -80,8 +80,8 @@ export default function G6VisitStatus() {
             </dl>
             {waiting && <div className="g6-estimate">
               <h3>예상 대기시간</h3>
-              <p className="g6-estimate-value">{estimateKnown ? `약 ${minutes}분` : '아직 알 수 없습니다'}</p>
-              <p>{estimateKnown ? `시연 계산: 앞선 인원 × 1명당 평균 ${v.avgMinutesPerPerson}분. 실제 시간은 현장 상황에 따라 달라질 수 있습니다.` : '시간을 계산할 근거가 없습니다. 어르신은 현장 직원의 순서 안내를 따라 주세요.'}</p>
+              <p className="g6-estimate-value">{v.peopleAhead === 0 ? '다음 차례입니다.' : estimateKnown ? `약 ${minutes}분` : '아직 알 수 없습니다'}</p>
+              <p>{v.peopleAhead === 0 ? '어르신은 현장 직원의 호출을 기다려 주세요.' : estimateKnown ? `시연 계산: 앞선 인원 × 1명당 평균 ${v.avgMinutesPerPerson}분. 실제 시간은 현장 상황에 따라 달라질 수 있습니다.` : '시간을 계산할 근거가 없습니다. 어르신은 현장 직원의 순서 안내를 따라 주세요.'}</p>
               <p className="g6-muted">번호 차이로 대기 인원을 계산하지 않습니다. 표시된 값은 마지막 기록이며, 현재 현장 상황과 다를 수 있습니다.</p>
             </div>}
           </section>
