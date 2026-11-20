@@ -55,6 +55,8 @@ export default function G6VisitStatus() {
           <div className="g6-next"><strong>다음 안내</strong><p>{copy.next}</p></div>
         </section>
 
+        {v.status === 'done' && <a className="g6-post-visit" href="#/g7">방문 후 확인</a>}
+
         <section className="g6-card" aria-labelledby="g6-steps-title">
           <h2 id="g6-steps-title">방문 진행 단계</h2>
           <ol className="g6-steps">

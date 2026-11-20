@@ -47,6 +47,7 @@ export default function DemoPanel() {
             <button key={s} className={path === s ? 'active' : ''} onClick={() => go(s)}>{s.toUpperCase()}</button>
           ))}
           <button className={path === 'g6' ? 'active' : ''} onClick={() => go('g6')}>G6 보호자 현황</button>
+          <button className={path === 'g7' ? 'active' : ''} onClick={() => go('g7')}>G7 방문 후 확인</button>
         </div>
       </div>
 
