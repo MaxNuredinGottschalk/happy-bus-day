@@ -1,13 +1,15 @@
 // E5 / E6 — waiting. Queue number, now-serving and people-ahead are SEPARATE values.
 // The estimate is shown only with an operational basis (avgMinutesPerPerson). Otherwise: "알 수 없음" + reason + next action.
-import { useVisit, STATUS_LABEL } from '../../state/visit'
+import { useVisit, STATUS_LABEL, estimateMinutes } from '../../state/visit'
 import Shell from '../Shell'
 import { Arrow, Phone } from '../icons'
 
+
 export default function Queue({ forceUnknown }: { forceUnknown?: boolean }) {
   const v = useVisit()
-  const known = !forceUnknown && v.avgMinutesPerPerson !== null
-  const minutes = known ? v.peopleAhead * (v.avgMinutesPerPerson as number) : 0
+  const est = forceUnknown ? null : estimateMinutes(v)
+  const known = est !== null
+  const minutes = est ?? 0
   const headline = v.status === 'checked_in' ? '접수되었습니다' : '순서를 기다리는 중'
   return (
     <Shell

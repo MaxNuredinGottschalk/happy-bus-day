@@ -132,3 +132,17 @@ export function formatClock(ms: number): string {
   const d = new Date(ms)
   return `${d.getHours()}시 ${d.getMinutes()}분`
 }
+
+
+/**
+ * Shared wait estimate, used by every screen (elderly and guardian).
+ * Returns whole minutes (rounded up), or null when there is no valid basis:
+ * average missing, zero or negative, or people-ahead missing or negative.
+ * null means the screen must show "알 수 없음" instead of a number.
+ */
+export function estimateMinutes(v: Pick<VisitState, 'peopleAhead' | 'avgMinutesPerPerson'>): number | null {
+  const avg = v.avgMinutesPerPerson
+  if (avg === null || !Number.isFinite(avg) || avg <= 0) return null
+  if (!Number.isFinite(v.peopleAhead) || v.peopleAhead < 0) return null
+  return Math.ceil(v.peopleAhead * avg)
+}
